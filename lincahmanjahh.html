@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lincah Manjah - Kenang-kenangan Kelas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.85)), url('unnamed.webp') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* Cover Card Interactive */
+        .cover-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            margin-bottom: 50px;
+            border: 2px dashed #ffb6c1;
+            position: relative;
+            cursor: pointer; /* Menandakan bisa diklik */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cover-card:hover {
+            transform: scale(1.02); /* Efek membesar sedikit saat disentuh */
+            box-shadow: 0 15px 40px rgba(209, 107, 139, 0.3);
+            border-color: #d16b8b;
+        }
+
+        .cover-card::before {
+            content: "💌 Open Me, Girl!";
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffb6c1;
+            color: #fff;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-family: 'Caveat', cursive;
+            font-size: 3.5rem;
+            color: #d16b8b;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .sweet-message {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            background: rgba(255, 240, 245, 0.6);
+            padding: 25px;
+            border-radius: 10px;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .click-hint {
+            font-size: 0.95rem;
+            color: #d16b8b;
+            font-weight: 600;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        /* Review Section */
+        .review-section {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 50px;
+            text-align: left;
+            border-left: 5px solid #ffb6c1;
+        }
+
+        /* Video Local Section */
+        .video-section {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .video-container {
+            max-width: 500px;
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            background: #fff;
+            padding: 10px;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .video-title {
+            font-family: 'Caveat', cursive;
+            font-size: 2.2rem;
+            color: #d16b8b;
+            margin-bottom: 15px;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .polaroid {
+            background: #fff;
+            padding: 15px 15px 40px 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            width: 260px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border: 1px solid #eee;
+        }
+
+        .polaroid-caption {
+            font-family: 'Caveat', cursive;
+            font-size: 1.5rem;
+            color: #444;
+            position: absolute;
+            bottom: 10px;
